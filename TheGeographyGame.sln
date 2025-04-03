@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Logic", "Geo.Logic\Geo.Logic.csproj", "{EBEECA3C-D28E-417F-B7D5-452CDE423285}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Webp", "Geo.Webp\Geo.Webp.csproj", "{96DAAFD3-18E1-423B-92A6-3B69BD0189EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Test", "Geo.Test\Geo.Test.csproj", "{9880305B-81D1-496C-BAF3-1B859BB64071}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBEECA3C-D28E-417F-B7D5-452CDE423285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEECA3C-D28E-417F-B7D5-452CDE423285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEECA3C-D28E-417F-B7D5-452CDE423285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEECA3C-D28E-417F-B7D5-452CDE423285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96DAAFD3-18E1-423B-92A6-3B69BD0189EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DAAFD3-18E1-423B-92A6-3B69BD0189EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DAAFD3-18E1-423B-92A6-3B69BD0189EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DAAFD3-18E1-423B-92A6-3B69BD0189EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9880305B-81D1-496C-BAF3-1B859BB64071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9880305B-81D1-496C-BAF3-1B859BB64071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9880305B-81D1-496C-BAF3-1B859BB64071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9880305B-81D1-496C-BAF3-1B859BB64071}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
