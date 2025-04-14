@@ -1,0 +1,42 @@
+@page "/game_board"
+
+<PageTitle>GameBoard</PageTitle>
+
+<h1>Game Board!</h1>
+
+Welcome to your new app.
+
+@if (GameRunner.Instance.GameStarted == false)
+{
+    <p> Waiting for game to start...</p>
+}
+else
+{
+    @if ()
+    <div class="game-container">
+        <div class="players-area">
+            @foreach (var player in GameRunner.Instance.Players)
+            {
+                <PlayerHand Player="player" CurrentPlayer="GameRunner.Instance.CurrentPlayer" OnChallenge="HandleChallenge" />
+            }
+        </div>
+
+        @if (IsCurrentPlayer)
+        {
+            <ActionPanel OnAttackTopsTrump="HandleTopsTrump" OnChallenge="ShowChallengeModal" />
+        }
+
+    </div>
+
+}
+
+@code {
+    private bool IsCurrentPlayer => GameService.IsCurrentPlayer(player);
+    private string PlayingTopsTrump = "Undecided";
+
+    private void HandleTopsTrump(StatisticType stat)
+    {
+        GameService.AttackTopsTrump(stat);
+        StateHasChanged();
+    }
+}

@@ -1,4 +1,4 @@
-﻿namespace Geo.Tests;
+namespace Geo.Tests;
 
 public class Tests
 {
@@ -12,4 +12,4 @@ public class Tests
     {
         Assert.Pass();
     }
-}
+}
