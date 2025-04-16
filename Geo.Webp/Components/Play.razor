@@ -1,0 +1,16 @@
+﻿
+@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, @Name</h1>
+
+Welcome to your new app.
+
+@code
+{
+    [SupplyParameterFromQuery]
+    public string Name {get; set; }
+    public Player Me => GameRunner.Instance.Players.FirstOrDefault(p=>p.Name==Name);
+
+}

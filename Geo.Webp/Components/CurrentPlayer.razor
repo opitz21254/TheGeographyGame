@@ -1,0 +1,30 @@
+<h1>@Player?.Name</h1>
+<ul>
+    <li>@Player.StartingHand[0].DistFromJerusalem</li>
+    <li>@Player.StartingHand[0].Elevation</li>
+    <li>@Player.StartingHand[0].Location</li>
+    <li>@Player.StartingHand[0].XMapCoordinate</li>
+</ul>
+
+<button @onclick=PlayTop>Play Top</button>
+<p>
+    - OR -
+</p>
+<select @bind=selectedStatistic>
+    <option value="Dist">Distance</option>
+    <option value="Elevation">Elevation</option>
+    <option value="Location">Location</option>
+    <option value="XMap">XMap</option>
+</select>
+
+@selectedStatistic
+
+@code{
+    [Parameter]
+    public Player Player {get; set;}
+    string selectedStatistic;
+    void PlayTop()
+    {
+        
+    }
+}

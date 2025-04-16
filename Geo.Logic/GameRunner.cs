@@ -2,31 +2,40 @@
 
 public class GameRunner
 {
+    public static GameRunner Instance {get; } = new GameRunner();
     public List<VanillaLocation> StartingHandOne { get; }
     public List<VanillaLocation> StartingHandTwo { get; }
     public List<VanillaLocation> StartingHandThree { get; }
     public static int StartingLife { get; private set; }
 
-    public static List<Player> Players { get; } = new List<Player>();
+    public List<Player> Players { get; } = new List<Player>();
     public bool Running { get; private set; } = true;
 
     //To Keep track of rounds
     public int CurrentRoundNumber { get; private set; }
     public int CurrentPlayer { get; private set; }
 
-    public GameRunner(
-        int startingLife,
-        List<VanillaLocation> startingHandOne,
-        List<VanillaLocation> startingHandTwo,
-        List<VanillaLocation> startingHandThree
-    )
+    public GameRunner()
     {
-        StartingLife = startingLife;
-        StartingHandOne = startingHandOne;
-        StartingHandTwo = startingHandTwo;
-        StartingHandThree = startingHandThree;
+        StartingLife = 20;
+        StartingHandOne = [new VanillaLocation("Mathew 1:1", 1, 1, 2),
+            new VanillaLocation("Mathew 2:1", 1, 1, 2),
+            new VanillaLocation("Mathew 3:1", 1, 1, 2),
+            new VanillaLocation("Mathew 4:1", 1, 1, 2),
+            new VanillaLocation("Mathew 5:1", 1, 1, 2),];
+        StartingHandTwo = [new VanillaLocation("Mathew 1:1", 1, 1, 2),
+            new VanillaLocation("Mathew 2:1", 1, 1, 2),
+            new VanillaLocation("Mathew 3:1", 1, 1, 2),
+            new VanillaLocation("Mathew 4:1", 1, 1, 2),
+            new VanillaLocation("Mathew 5:1", 1, 1, 2),];
+        StartingHandThree = [new VanillaLocation("Mathew 1:1", 1, 1, 2),
+            new VanillaLocation("Mathew 2:1", 1, 1, 2),
+            new VanillaLocation("Mathew 3:1", 1, 1, 2),
+            new VanillaLocation("Mathew 4:1", 1, 1, 2),
+            new VanillaLocation("Mathew 5:1", 1, 1, 2),];
         CurrentRoundNumber = 0;
     }
+    
 
     // public bool Start(List<ICard> deck1, List<ICard> deck2)
     // {
@@ -111,7 +120,7 @@ public class GameRunner
 
     public bool CreatePlayer(string playerName, List<VanillaLocation> startingHand)
     {
-        Players.Add(new Player(playerName, List<VanillaLocation> startingHand));
+        Players.Add(new Player(playerName, startingHand));
         return true;
     }
 
@@ -180,34 +189,4 @@ public class GameRunner
 
     //     return true;
     // }
-}
-
-public class VanillaLocation
-{
-    public string Location { get; }
-    public int DistFromJerusalem { get; }
-    public int Elevation { get; }
-    public int XMapCoordinate { get; }
-
-    public VanillaLocation(string location, int dist, int elev, int x)
-    {
-        Location = location;
-        DistFromJerusalem = dist;
-        Elevation = elev;
-        XMapCoordinate = x;
-    }
-}
-
-public class Player
-{
-    public string Name { get; }
-    public List<VanillaLocation> StartingHand { get; }
-
-    public Player(string name, List<VanillaLocation> startingHand)
-    {
-        {
-            Name = name;
-            StartingHand = startingHand;
-        }
-    }
 }
